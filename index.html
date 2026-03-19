@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-smooth-scroll="true" tabindex="0">
+
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+
+    <!-- Header / Navbar -->
+    <nav id="navbar" class="navbar navbar-expand-lg fixed-top custom-navbar py-3">
+        <div class="container">
+            <a class="navbar-brand fw-bolder fs-3" href="#home">Port<span class="text-gradient">folio</span></a>
+            
+            <div class="d-flex align-items-center order-lg-last ms-3 gap-3">
+                <button id="theme-toggle" class="btn btn-link text-body p-0 text-decoration-none custom-hover" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon fs-5"></i>
+                </button>
+                <button class="navbar-toggler border-0 shadow-none px-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto fw-medium">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="min-vh-100 d-flex align-items-center section-padding pt-5 pt-lg-0">
+            <div class="container">
+                <div class="row align-items-center g-5 mt-4 mt-lg-0">
+                    <div class="col-lg-6 text-center text-lg-start reveal order-2 order-lg-1">
+                        <h4 class="text-muted fw-medium mb-3">Hello, It's Me</h4>
+                        <h1 class="display-3 fw-bolder mb-3">Vansh <span class="text-gradient">Bansal</span></h1>
+                        <h3 class="h2 fw-semibold mb-4">And I'm a <span class="typing-text text-secondary-gradient"></span><span class="cursor text-secondary-gradient">|</span></h3>
+                        <p class="lead text-muted mb-4 fs-6">I specialize in building creative, modern, and high-performance user interfaces. I love turning complex problems into elegant and intuitive solutions.</p>
+                        
+                        <div class="d-flex gap-3 justify-content-center justify-content-lg-start mb-4">
+                            <a href="https://github.com/Vanxh004" class="social-icon" aria-label="Github"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/vansh-bansal-034a08311/" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.instagram.com/vansh.bansal.5891/" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://wa.me/918445461617" class="social-icon" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                        
+                        <div class="d-flex gap-3 justify-content-center justify-content-lg-start mt-2">
+                            <a href="#contact" class="btn btn-gradient rounded-pill px-4 py-2 fw-semibold shadow-sm">Hire Me</a>
+                            <a href="#" class="btn btn-outline-primary text-body rounded-pill px-4 py-2 fw-semibold shadow-sm outline-btn-custom" download>Download CV</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 text-center reveal order-1 order-lg-2">
+                        <div class="img-box mx-auto">
+                            <!-- Placeholder Image -->
+                            <img src="images\WhatsApp Image 2025-08-22 at 2.31.51 PM.jpeg" alt="Profile Image" class="img-fluid rounded-circle w-100 h-100 object-fit-cover border border-5 border-body-bg bg-body-bg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section-padding bg-body-tertiary">
+            <div class="container">
+                <h2 class="text-center display-5 fw-bold mb-5 reveal">About <span class="text-gradient">Me</span></h2>
+                <div class="row justify-content-center reveal">
+                    <div class="col-lg-8">
+                        <div class="card border-0 shadow-sm rounded-4 p-4 p-md-5 hover-lift bg-body">
+                            <h3 class="h4 mb-3 fw-bold">Frontend Developer & UI/UX Designer!</h3>
+                            <p class="text-muted mb-3 fs-6">I am passionate about creating interactive and fully responsive web applications. With a strong foundation in modern web technologies, I strive to deliver pixel-perfect designs with clean, maintainable code.</p>
+                            <p class="text-muted mb-0 fs-6">My goal is to constantly grow and learn new tools to solve real-world problems effectively. Whether working on a solo project or in a team, I bring dedication and a keen eye for aesthetics.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section-padding">
+            <div class="container">
+                <h2 class="text-center display-5 fw-bold mb-5 reveal">My <span class="text-gradient">Skills</span></h2>
+                <div class="row g-4 justify-content-center reveal">
+                    <!-- Frontend -->
+                    <div class="col-md-6">
+                        <div class="card h-100 border-0 shadow-sm rounded-4 p-4 hover-lift bg-body-tertiary">
+                            <h3 class="h5 fw-bold mb-4 text-center text-primary">Frontend</h3>
+                            <div class="row g-3 text-center">
+                                <div class="col-6"><i class="fab fa-html5 fs-1 text-danger mb-2 hover-color"></i><p class="small fw-medium m-0">HTML5</p></div>
+                                <div class="col-6"><i class="fab fa-css3-alt fs-1 text-primary mb-2 hover-color"></i><p class="small fw-medium m-0">CSS3</p></div>
+                                <div class="col-6"><i class="fab fa-js fs-1 text-warning mb-2 hover-color"></i><p class="small fw-medium m-0">JavaScript</p></div>
+                                <div class="col-6"><i class="fab fa-react fs-1 text-info mb-2 hover-color"></i><p class="small fw-medium m-0">React</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="section-padding bg-body-tertiary">
+            <div class="container">
+                <h2 class="text-center display-5 fw-bold mb-5 reveal">My <span class="text-gradient">Education</span></h2>
+                <div class="row justify-content-center reveal">
+                    <div class="col-lg-8">
+                        <div class="timeline">
+                            <div class="timeline-item card border-0 shadow-sm rounded-4 p-4 hover-lift mb-4 bg-body">
+                                <span class="badge bg-primary-subtle text-primary rounded-pill px-3 py-2 fw-semibold mb-3 d-inline-block">2023 - 2026</span>
+                                <h3 class="h5 fw-bold">Bachelor of Computer Applications</h3>
+                                <h4 class="h6 text-muted mb-3">IIMT College of Management (Greater Noida)</h4>
+                                <p class="mb-0 text-muted fs-6">Focus on software engineering, web development, and algorithms.</p>
+                            </div>
+                            <div class="timeline-item card border-0 shadow-sm rounded-4 p-4 hover-lift bg-body">
+                                <span class="badge bg-primary-subtle text-primary rounded-pill px-3 py-2 fw-semibold mb-3 d-inline-block">2020 - 2023</span>
+                                <h3 class="h5 fw-bold">Secondary & Higher Secondary Education (CBSE)</h3>
+                                <h4 class="h6 text-muted mb-3">Ved International School</h4>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section-padding">
+            <div class="container">
+                <h2 class="text-center display-5 fw-bold mb-5 reveal">My <span class="text-gradient">Experience</span></h2>
+                <div class="row justify-content-center reveal">
+                    <div class="col-lg-8">
+                        <div class="timeline">
+                            <div class="timeline-item card border-0 shadow-sm rounded-4 p-4 hover-lift mb-4 bg-body-tertiary">
+                                <span class="badge bg-primary-subtle text-primary rounded-pill px-3 py-2 fw-semibold mb-3 d-inline-block">June 2025 - August 2025</span>
+                                <h3 class="h5 fw-bold">Frontend Developer Intern</h3>
+                                <h4 class="h6 text-muted mb-3">Edunext Technologies Pvt. Ltd.</h4>
+                                <p class="mb-0 text-muted fs-6">During my Frontend Development internship, I developed responsive websites using HTML, CSS, and React.js, with a strong focus on clean UI, performance, and user experience.</p>
+                            </div>
+                            <div class="timeline-item card border-0 shadow-sm rounded-4 p-4 hover-lift bg-body-tertiary">
+                                <span class="badge bg-primary-subtle text-primary rounded-pill px-3 py-2 fw-semibold mb-3 d-inline-block">Present</span>
+                                <h3 class="h5 fw-bold">Freelance Web Developer</h3>
+                                <h4 class="h6 text-muted mb-3">Self-Employed</h4>
+                                <p class="mb-0 text-muted fs-6">Built custom websites for local businesses. Handled everything from UI/UX design.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section-padding bg-body-tertiary">
+            <div class="container">
+                <h2 class="text-center display-5 fw-bold mb-5 reveal">Latest <span class="text-gradient">Projects</span></h2>
+                <div class="row g-4 reveal">
+                    <!-- Project 1 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden hover-lift bg-body">
+                            <img src="images\cafe_img.png.jpg" class="card-img-top object-fit-cover hover-zoom" height="200" alt="E-Commerce Platform">
+                            <div class="card-body p-4">
+                                <h3 class="h5 fw-bold mb-2">Restaurant website</h3>
+                                <p class="card-text text-muted mb-4 fs-6">Built “FitCart Cafe,” a responsive and visually appealing website for a health and fitness café, focusing on clean UI, smooth navigation, and an engaging user experience using HTML, CSS, and JavaScript.</p>
+                                <div class="d-flex gap-2">
+                                    <a href="https://fitcartcafe.netlify.app/" class="btn btn-outline-secondary btn-sm rounded-pill px-3"><i class="fas fa-external-link-alt me-1"></i> Live Demo</a>
+                                    <a href="https://github.com/vanxh004/fitcart-cafe-website.git" class="btn btn-outline-secondary btn-sm rounded-pill px-3"><i class="fab fa-github me-1"></i> GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden hover-lift bg-body">
+                            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="card-img-top object-fit-cover hover-zoom" height="200" alt="Task App">
+                            <div class="card-body p-4">
+                                <h3 class="h5 fw-bold mb-2">Task Management App</h3>
+                                <p class="card-text text-muted mb-4 fs-6">A sleek productivity app utilizing LocalStorage and drag-and-drop features for task organization.</p>
+                                <div class="d-flex gap-2">
+                                    <a href="#" class="btn btn-outline-secondary btn-sm rounded-pill px-3"><i class="fas fa-external-link-alt me-1"></i> Live Demo</a>
+                                    <a href="#" class="btn btn-outline-secondary btn-sm rounded-pill px-3"><i class="fab fa-github me-1"></i> GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden hover-lift bg-body">
+                            <img src="https://images.unsplash.com/photo-1627398242454-45a1465c2479?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="card-img-top object-fit-cover hover-zoom" height="200" alt="Weather Dashboard">
+                            <div class="card-body p-4">
+                                <h3 class="h5 fw-bold mb-2">Weather Dashboard</h3>
+                                <p class="card-text text-muted mb-4 fs-6">Real-time weather application fetching data from a RESTful API with dynamic background changes.</p>
+                                <div class="d-flex gap-2">
+                                    <a href="#" class="btn btn-outline-secondary btn-sm rounded-pill px-3"><i class="fas fa-external-link-alt me-1"></i> Live Demo</a>
+                                    <a href="#" class="btn btn-outline-secondary btn-sm rounded-pill px-3"><i class="fab fa-github me-1"></i> GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section-padding">
+            <div class="container">
+                <h2 class="text-center display-5 fw-bold mb-5 reveal">Contact <span class="text-gradient">Me</span></h2>
+                <div class="row justify-content-center bg-body-tertiary rounded-4 shadow-sm align-items-center g-0 overflow-hidden reveal border border-1 border-opacity-10 border-primary">
+                    <div class="col-lg-5 p-5 text-center text-lg-start h-100 border-end">
+                        <h3 class="h4 fw-bold mb-3">Let's Work Together</h3>
+                        <p class="text-muted mb-5">Feel free to reach out for collaborations or just a friendly hello. I am currently open to new opportunities!</p>
+                        
+                        <div class="d-flex align-items-center mb-4 gap-3 justify-content-center justify-content-lg-start">
+                            <div class="icon-circle bg-primary-subtle text-primary rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                                <i class="fas fa-envelope fs-5"></i>
+                            </div>
+                            <span class="fw-medium">vanshbansal004@gmail.com</span>
+                        </div>
+                        <div class="d-flex align-items-center mb-4 gap-3 justify-content-center justify-content-lg-start">
+                            <div class="icon-circle bg-primary-subtle text-primary rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                                <i class="fas fa-phone-alt fs-5"></i>
+                            </div>
+                            <span class="fw-medium">+91 8445461617</span>
+                        </div>
+                        <div class="d-flex align-items-center gap-3 justify-content-center justify-content-lg-start">
+                            <div class="icon-circle bg-primary-subtle text-primary rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                                <i class="fas fa-map-marker-alt fs-5"></i>
+                            </div>
+                            <span class="fw-medium">Delhi, India</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 p-5">
+                        <form id="contact-form" class="needs-validation" novalidate>
+                            <div class="mb-4">
+                                <input type="text" class="form-control form-control-lg bg-body" id="name" placeholder="Your Name" required>
+                                <div class="invalid-feedback">Please enter your name.</div>
+                            </div>
+                            <div class="mb-4">
+                                <input type="email" class="form-control form-control-lg bg-body" id="email" placeholder="Your Email" required>
+                                <div class="invalid-feedback">Please enter a valid email address.</div>
+                            </div>
+                            <div class="mb-4">
+                                <input type="text" class="form-control form-control-lg bg-body" id="subject" placeholder="Subject" required>
+                                <div class="invalid-feedback">Please enter a subject.</div>
+                            </div>
+                            <div class="mb-4">
+                                <textarea class="form-control form-control-lg bg-body" id="message" rows="5" placeholder="Your Message" required></textarea>
+                                <div class="invalid-feedback">Please write a message.</div>
+                            </div>
+                            <button type="submit" class="btn btn-gradient rounded-pill px-5 py-3 fw-bold shadow-sm">Send Message <i class="fas fa-paper-plane ms-2"></i></button>
+                            <div id="form-message" class="mt-3 d-none rounded p-3 fw-medium"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-body-tertiary pt-5 pb-4 border-top">
+        <div class="container text-center position-relative">
+            <p class="text-muted fw-medium mb-3">&copy; 2026 <span class="text-gradient fw-bold">Vansh Bansal</span>. All Rights Reserved.</p>
+            <div class="d-flex justify-content-center gap-3 mb-0">
+                <a href="https://www.linkedin.com/in/vansh-bansal-034a08311/" target="_blank" class="text-muted hover-color fs-5" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/vansh.bansal.5891/" target="_blank" class="text-muted hover-color fs-5" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/918445461617" target="_blank" class="text-muted hover-color fs-5" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://github.com/Vanxh004" target="_blank" class="text-muted hover-color fs-5" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+            
+            <!-- Scroll to top -->
+            <a href="#home" class="btn btn-gradient rounded-circle position-absolute top-0 end-0 translate-middle-y shadow hover-lift" style="width: 45px; height: 45px; display: flex; align-items: center; justify-content: center;" aria-label="Scroll to top">
+                <i class="fas fa-arrow-up text-white"></i>
+            </a>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
