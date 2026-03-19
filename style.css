@@ -1,0 +1,253 @@
+/* ===== Variables ===== */
+:root {
+    --primary-color: #3b82f6;
+    --secondary-color: #8b5cf6;
+    --gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+[data-bs-theme="dark"] {
+    --primary-color: #60a5fa;
+    --secondary-color: #a78bfa;
+}
+
+/* ===== Base Styles ===== */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--bs-body-color);
+}
+
+.section-padding {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+/* ===== Utilities ===== */
+.text-gradient {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.text-secondary-gradient {
+    color: var(--secondary-color);
+}
+
+.btn-gradient {
+    background: var(--gradient);
+    color: white !important;
+    border: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-gradient:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+}
+
+.hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
+}
+
+.hover-color {
+    transition: color 0.3s ease;
+}
+
+.hover-color:hover {
+    color: var(--primary-color) !important;
+}
+
+.outline-btn-custom {
+    border-color: var(--primary-color);
+}
+
+.outline-btn-custom:hover {
+    background-color: var(--primary-color);
+    color: white !important;
+}
+
+/* ===== Navbar ===== */
+.custom-navbar {
+    transition: background-color 0.3s, padding 0.3s, box-shadow 0.3s;
+}
+
+.custom-navbar.scrolled {
+    background-color: var(--bs-body-bg) !important;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+}
+
+@supports (backdrop-filter: blur(10px)) {
+    .custom-navbar.scrolled {
+        background-color: rgba(var(--bs-body-bg-rgb), 0.9) !important;
+        backdrop-filter: blur(10px);
+    }
+}
+
+.nav-link {
+    position: relative;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+    margin: 0 0.5rem;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.nav-link.active::after, .nav-link:hover::after {
+    width: 80%;
+}
+
+.nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+/* ===== Hero Section Animations ===== */
+.img-box {
+    width: 350px;
+    height: 350px;
+    padding: 10px;
+    background: var(--gradient);
+    border-radius: 50%;
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.social-icon {
+    width: 45px;
+    height: 45px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: var(--bs-tertiary-bg);
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    border: 1px solid var(--bs-border-color);
+}
+
+.social-icon:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.cursor {
+    display: inline-block;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* ===== Timeline ===== */
+.timeline {
+    border-left: 3px solid var(--primary-color);
+    padding-left: 30px;
+    margin-left: 15px;
+}
+
+.timeline-item {
+    position: relative;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -42px;
+    top: 25px;
+    width: 20px;
+    height: 20px;
+    background: var(--bs-body-bg);
+    border: 4px solid var(--secondary-color);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* ===== Project Cards Image Zoom ===== */
+.hover-zoom {
+    transition: transform 0.5s ease;
+}
+.card:hover .hover-zoom {
+    transform: scale(1.05);
+}
+
+/* ===== Scroll Reveal Animations ===== */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== Loader ===== */
+.loader {
+    position: fixed;
+    inset: 0;
+    background: var(--bs-body-bg);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease;
+}
+
+.loader.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* ===== Responsive Adjustments ===== */
+@media (max-width: 991px) {
+    .nav-link::after {
+        display: none;
+    }
+    .custom-navbar .navbar-collapse {
+        background-color: var(--bs-body-bg);
+        padding: 1rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+        margin-top: 10px;
+    }
+    .img-box {
+        width: 300px;
+        height: 300px;
+    }
+}
+@media (max-width: 576px) {
+    .img-box {
+        width: 250px;
+        height: 250px;
+    }
+    .section-padding {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
